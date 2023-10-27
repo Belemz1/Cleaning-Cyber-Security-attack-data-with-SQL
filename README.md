@@ -50,8 +50,7 @@ The milliseconds on the timestamp column wont be needed in our analysis, therefo
     update dbo.cybersecurity_attacks 
     set TimestampNew = convert(smalldatetime, [timestamp],0) from cybersecurity_attacks;
 
-
-select * from dbo.cybersecurity_attacks;
+![](2.0.png)
 
 
 --Drop payload_Data column
