@@ -58,11 +58,13 @@ The payload_Data column wont be needed in our analysis, so i had to drop that co
 
     ALTER TABLE dbo.cybersecurity_attacks drop column payload_Data;
 
--- Drop device_information column
+### DROP DEVICE_INFORMATION COLUMN
+
+This column is also not needed in our analysis, hence i wrote this query to drop it
 
     alter table dbo.cybersecurity_attacks drop column device_information;
 
--- replace null values in Malware_indicators and Alert_warnings with No detection and Alert Triggered
+### REPLACE NULL VALUES IN MALWARE_INDICATORS AND ALERT-WARNINGS WITH 'NO DETECTION' AND 'ALERT TRIGGERED'
 
     select alerts_warnings,isnull(NULL,'Alert Triggered') from dbo.cybersecurity_attacks;
 
