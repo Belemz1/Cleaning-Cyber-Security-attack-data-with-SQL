@@ -83,7 +83,7 @@ This query replaces and updates the tables
 
 ![](3.1.png)
 
--- create two column for geolocation
+### CREATE TWO COLUMN FROM GEO_LOCATION_DATA
 
     select geo_location_data, Parsename(replace(geo_location_data,',','.'),2)as Geo_location_data,
     Parsename(replace(geo_location_data,',','.'),1) as Geo_Sub_location_data from dbo.cybersecurity_attacks;
@@ -98,13 +98,16 @@ This query replaces and updates the tables
     update dbo.cybersecurity_attacks
     set Geo_location_data = Parsename(replace(geo_location_data,',','.'),2) FROM DBO.cybersecurity_attacks;
 
--- Delete null values from Proxy_Information
+![](4.0.png)
+
+
+### DELETE NULL VALUES FROM PROXY_INFORMATION
 
     delete from dbo.cybersecurity_attacks where proxy_information is null;
 
     select proxy_information from dbo.cybersecurity_attacks;
 
---Replace Firewall_logs and IDS_IPS_Alerts null data with Log Data and Alert Data
+### REPLACE FIREWALL_LOGS AND IDS_IPS_ALERTS NULL DATA WITH 'LOG DATA' and 'ALERT DATA'
 
     select isnull(Firewall_logs,'Log Data'),isnull(IDS_IPS_Alerts,'Alert Data') from dbo.cybersecurity_attacks;
 
