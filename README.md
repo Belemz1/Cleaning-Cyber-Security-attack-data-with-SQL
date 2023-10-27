@@ -36,7 +36,7 @@ The *SELECT TOP(1000)* query is ran to view the tables contained
       ,[Log_Source]
       FROM [Portfolio].[dbo].[cybersecurity_attacks]
 
---initial data contains 40,000 rows
+![](1.0.png),![](1.1.png),![](1.2.png),![](1.3.png)
 
 -- On time stamp, remove milsecond
 
