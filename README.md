@@ -103,9 +103,13 @@ This query replaces and updates the tables
 
 ### DELETE NULL VALUES FROM PROXY_INFORMATION
 
+![](5.0.png)
+
     delete from dbo.cybersecurity_attacks where proxy_information is null;
 
     select proxy_information from dbo.cybersecurity_attacks;
+
+![](5.1.png)
 
 ### REPLACE FIREWALL_LOGS AND IDS_IPS_ALERTS NULL DATA WITH 'LOG DATA' and 'ALERT DATA'
 
@@ -116,6 +120,8 @@ This query replaces and updates the tables
 
     update dbo.cybersecurity_attacks
     set IDS_IPS_Alerts = isnull(IDS_IPS_Alerts,'Alert Data') from dbo.cybersecurity_attacks;
+
+![](6.0.png)
 
 
 
