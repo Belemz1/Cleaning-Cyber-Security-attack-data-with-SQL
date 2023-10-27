@@ -123,6 +123,10 @@ This query replaces and updates the tables
 
 ![](6.0.png)
 
+## CONCLUSION
+
+In performing this task, the following string functions were used **PARSENAME**,**ISNULL**,**REPLACE** AND **CONVERT**. Some columns that were not relevant to the analysis and visualization in Power BI was dropped, and null values populated
+
 
 
 
