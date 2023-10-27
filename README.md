@@ -38,7 +38,9 @@ The *SELECT TOP(1000)* query is ran to view the tables contained
 
 ![](1.0.png),![](1.1.png),![](1.2.png),![](1.3.png)
 
--- On time stamp, remove milsecond
+### REMOVING MILLISECONDS FROM TIMESTAMP COLUMN
+
+The milliseconds on the timestamp column wont be needed in our analysis, therefore the need for it to be removed. The query below removes the milliseconds.
 
     select timestamp, convert(smalldatetime, [timestamp],0) as Timestamp from cybersecurity_attacks;
 
