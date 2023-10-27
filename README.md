@@ -64,7 +64,11 @@ This column is also not needed in our analysis, hence i wrote this query to drop
 
     alter table dbo.cybersecurity_attacks drop column device_information;
 
-### REPLACE NULL VALUES IN MALWARE_INDICATORS AND ALERT-WARNINGS WITH 'NO DETECTION' AND 'ALERT TRIGGERED'
+### REPLACE NULL VALUES IN MALWARE_INDICATORS AND ALERT-WARNINGS WITH 'IOC DETECTED' AND 'ALERT TRIGGERED'
+
+![](3.0.png)
+
+This query replaces and updates the tables
 
     select alerts_warnings,isnull(NULL,'Alert Triggered') from dbo.cybersecurity_attacks;
 
@@ -76,6 +80,8 @@ This column is also not needed in our analysis, hence i wrote this query to drop
 
     update dbo.cybersecurity_attacks
     set Malware_Indicators = isnull(NULL,'IoC Detected') from dbo.cybersecurity_attacks;
+
+![](3.1.png)
 
 -- create two column for geolocation
 
