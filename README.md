@@ -1,5 +1,14 @@
 # Cleaning-Cyber-Security-attack-data-with-SQL
 
+## INTRODUCTION
+The Purpose of this task is to use SQL to clean Cyber Security attack data. We check the data for Accuracy, completeness, consistency, relevance, validity and uniqueness.
+The data source is from [](https://www.kaggle.com/), and the aim is to clean with SQL then analyze and visualize with Microsoft Power BI.
+
+## PROCEDURES
+The SQL tool used in this analysis is Azure Data studio. The data is downloaded and imported into an already created data base called **PORTFOLIO**. On importation, it is seen that the data contains 40,000 rows of data.
+
+The *SELECT TOP(1000)* query is ran to view the tables contained
+
     SELECT TOP (1000) [Timestamp]
       ,[Source_IP_Address]
       ,[Destination_IP_Address]
