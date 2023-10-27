@@ -52,8 +52,9 @@ The milliseconds on the timestamp column wont be needed in our analysis, therefo
 
 ![](2.0.png)
 
+### DROP PAYLOAD_DATA COLUMN
 
---Drop payload_Data column
+The payload_Data column wont be needed in our analysis, so i had to drop that column with this query
 
     ALTER TABLE dbo.cybersecurity_attacks drop column payload_Data;
 
