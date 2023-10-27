@@ -1,10 +1,12 @@
 # Cleaning-Cyber-Security-attack-data-with-SQL
 
 ## INTRODUCTION
+
 The Purpose of this task is to use SQL to clean Cyber Security attack data. We check the data for Accuracy, completeness, consistency, relevance, validity and uniqueness.
 The data source is from [](https://www.kaggle.com/), and the aim is to clean with SQL then analyze and visualize with Microsoft Power BI.
 
 ## PROCEDURES
+
 The SQL tool used in this analysis is Azure Data studio. The data is downloaded and imported into an already created data base called **PORTFOLIO**. On importation, it is seen that the data contains 40,000 rows of data.
 
 The *SELECT TOP(1000)* query is ran to view the tables contained
@@ -125,7 +127,7 @@ This query replaces and updates the tables
 
 ## CONCLUSION
 
-In performing this task, the following string functions were used **PARSENAME**,**ISNULL**,**REPLACE** AND **CONVERT**. Some columns that were not relevant to the analysis and visualization in Power BI was dropped, and null values populated
+In performing this task, the following string functions were used **PARSENAME**,**ISNULL**,**REPLACE** AND **CONVERT**. Some columns that were not relevant to the analysis and visualization in Power BI was dropped, and null values populated. It is also important to note that before you drop a column or alter a table, you have to be very sure because the process can not reversed.
 
 
 
